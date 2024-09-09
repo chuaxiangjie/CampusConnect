@@ -1,4 +1,5 @@
 # CampusConnect
+Your One-Stop University Portal
 
 ## Technologies
 
