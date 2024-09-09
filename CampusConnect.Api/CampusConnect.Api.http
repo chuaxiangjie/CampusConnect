@@ -1,0 +1,38 @@
+﻿@CampusConnect.Api_HostAddress = https://localhost:44374
+
+POST {{CampusConnect.Api_HostAddress}}/api/universities
+Content-Type: application/json
+
+{
+  //CreateUniversityInput
+}
+
+###
+
+GET {{CampusConnect.Api_HostAddress}}/api/universities
+userid: 0
+
+###
+
+DELETE {{CampusConnect.Api_HostAddress}}/api/universities/{id}
+
+###
+
+PUT {{CampusConnect.Api_HostAddress}}/api/universities/{id}
+Content-Type: application/json
+
+{
+  //UpdateUniversityInput
+}
+
+###
+
+GET {{CampusConnect.Api_HostAddress}}/api/universities/{id}
+userid: 0
+
+###
+
+POST {{CampusConnect.Api_HostAddress}}/api/universities/{id}
+userid: 0
+
+###
