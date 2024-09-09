@@ -3,7 +3,7 @@ Your One-Stop University Portal
 
 ## Technologies
 
-Framework
+Architecture
    * Database - Microsoft SQL Server
    * Rest Api - Develop using .Net 8
 
