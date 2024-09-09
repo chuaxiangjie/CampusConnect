@@ -68,3 +68,5 @@ dotnet ef database update
 #### Execute Rest Apis via swagger
 
 Browse swagger url : [(https://localhost:44374/swagger/index.html)](https://localhost:44374/swagger/index.html)
+
+![image](https://github.com/user-attachments/assets/dcf8c35e-a600-4636-a845-d5bd4459e8c1)
