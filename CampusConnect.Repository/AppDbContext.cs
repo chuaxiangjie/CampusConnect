@@ -26,6 +26,15 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
         modelBuilder.Entity<Country>(entity =>
         {
             entity.HasKey(x => x.Id);
+
+            entity.Property(x => x.CountryCode)
+            .HasMaxLength(3)
+            .IsRequired();
+
+            entity.Property(x => x.Name)
+            .HasMaxLength(50)
+            .IsRequired();
+
             entity.HasData(countries);
         });
 
@@ -96,9 +105,9 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
 
         var universities = new List<University>
         {
-            new() { Id = Guid.NewGuid(), Name = "National University of Singapore", CountryId = singapore.Id, Webpages = ["www.website1.com", "www.register.website1.com"], IsActive = true, Created = DateTime.UtcNow },
-            new() { Id = Guid.NewGuid(), Name = "Nanyang Technological University", CountryId = singapore.Id, Webpages = ["www.website2.com", "www.register.website2.com"], IsActive = true, Created = DateTime.UtcNow },
-            new() { Id = Guid.NewGuid(), Name = "Universiti Malaya", CountryId = malaysia.Id, Webpages = ["www.website3.com", "www.register.website3.com"], IsActive = true, Created = DateTime.UtcNow }
+            new() { Id = Guid.NewGuid(), Name = "National University of Singapore", CountryId = singapore.Id, Webpages = ["http://www.website1.com", "http://www.register.website1.com"], IsActive = true, Created = DateTime.UtcNow },
+            new() { Id = Guid.NewGuid(), Name = "Nanyang Technological University", CountryId = singapore.Id, Webpages = ["http://www.website2.com", "http://www.register.website2.com"], IsActive = true, Created = DateTime.UtcNow },
+            new() { Id = Guid.NewGuid(), Name = "Universiti Malaya", CountryId = malaysia.Id, Webpages = ["htp://www.website3.com", "http://www.register.website3.com"], IsActive = true, Created = DateTime.UtcNow }
         };
 
         return (countries, universities);

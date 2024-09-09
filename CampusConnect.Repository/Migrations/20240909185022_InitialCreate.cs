@@ -18,8 +18,8 @@ namespace CampusConnect.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    CountryCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    CountryCode = table.Column<string>(type: "nvarchar(3)", maxLength: 3, nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -75,8 +75,8 @@ namespace CampusConnect.Data.Migrations
                 columns: new[] { "Id", "CountryCode", "Name" },
                 values: new object[,]
                 {
-                    { new Guid("48ed711d-1e45-4ec3-8008-f88de0e59f00"), "MYS", "Malaysia" },
-                    { new Guid("8a3a2f5a-b820-4011-8cfc-3bf5a13c677b"), "SGP", "Singapore" }
+                    { new Guid("af2c2357-0c2d-42fe-ab8c-a8000d6c32e1"), "SGP", "Singapore" },
+                    { new Guid("caf8f361-237b-43c6-bdd9-5444595a5910"), "MYS", "Malaysia" }
                 });
 
             migrationBuilder.InsertData(
@@ -84,9 +84,9 @@ namespace CampusConnect.Data.Migrations
                 columns: new[] { "Id", "CountryId", "Created", "DeletedAt", "IsActive", "IsDeleted", "LastModified", "Name", "Webpages" },
                 values: new object[,]
                 {
-                    { new Guid("af4a11a6-b46b-4bd6-895b-8f71ed917cb6"), new Guid("8a3a2f5a-b820-4011-8cfc-3bf5a13c677b"), new DateTime(2024, 9, 7, 15, 29, 44, 385, DateTimeKind.Utc).AddTicks(327), null, true, false, null, "Nanyang Technological University", "www.website2.com,www.register.website2.com" },
-                    { new Guid("f43cd618-f71e-4c27-85df-81f0071f13cd"), new Guid("8a3a2f5a-b820-4011-8cfc-3bf5a13c677b"), new DateTime(2024, 9, 7, 15, 29, 44, 385, DateTimeKind.Utc).AddTicks(321), null, true, false, null, "National University of Singapore", "www.website1.com,www.register.website1.com" },
-                    { new Guid("fcc0f4d8-52ca-410c-8ed1-191f12c0ccb8"), new Guid("48ed711d-1e45-4ec3-8008-f88de0e59f00"), new DateTime(2024, 9, 7, 15, 29, 44, 385, DateTimeKind.Utc).AddTicks(343), null, true, false, null, "Universiti Malaya", "www.website3.com,www.register.website3.com" }
+                    { new Guid("7cf69bce-952f-4209-b919-da909c86671f"), new Guid("caf8f361-237b-43c6-bdd9-5444595a5910"), new DateTime(2024, 9, 9, 18, 50, 22, 78, DateTimeKind.Utc).AddTicks(4122), null, true, false, null, "Universiti Malaya", "htp://www.website3.com,http://www.register.website3.com" },
+                    { new Guid("c2ec79fc-04a6-49b8-8f7c-eb3adec9f771"), new Guid("af2c2357-0c2d-42fe-ab8c-a8000d6c32e1"), new DateTime(2024, 9, 9, 18, 50, 22, 78, DateTimeKind.Utc).AddTicks(4115), null, true, false, null, "National University of Singapore", "http://www.website1.com,http://www.register.website1.com" },
+                    { new Guid("c9f4b1db-2e16-452b-b401-52e1f27c8840"), new Guid("af2c2357-0c2d-42fe-ab8c-a8000d6c32e1"), new DateTime(2024, 9, 9, 18, 50, 22, 78, DateTimeKind.Utc).AddTicks(4119), null, true, false, null, "Nanyang Technological University", "http://www.website2.com,http://www.register.website2.com" }
                 });
 
             migrationBuilder.CreateIndex(

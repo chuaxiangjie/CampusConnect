@@ -11,6 +11,7 @@ public class UpdateUniversityInput
     public Guid CountryId { get; set; }
 
     [ValidUrlArray]
+    [StringArrayMaxLength(200)]
     public string[] Webpages { get; set; }
     public bool IsActive { get; set; }
 }

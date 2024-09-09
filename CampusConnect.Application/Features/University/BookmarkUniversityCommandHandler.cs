@@ -30,6 +30,15 @@ public class BookmarkUniversityCommandHandler(AppDbContext dbContext) : IRequest
             };
         }
 
+        if (!existingUniversity.IsActive)
+        {
+            return new Envelope<Guid>
+            {
+                Response = ResponseType.Error,
+                Error = "Unable to bookmark inactive university."
+            };
+        }
+
         var existingBookmark = await dbContext.UserUniversityBookmarks
             .FirstOrDefaultAsync(b => b.UniversityId == command.Id && b.UserId == command.UserId);
 
