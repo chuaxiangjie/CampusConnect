@@ -20,9 +20,11 @@ Follow tutorial : https://www.c-sharpcorner.com/article/how-to-install-sql-serve
 
 3. Clone git repository via visual studio
    
-4. Verify database connection string in application
+4. Verify database connection string in `appsettings.json`
 > [!NOTE]
 > No need to change anything
+
+![image](https://github.com/user-attachments/assets/3a99eccf-7b94-4f84-8a8e-ed33ff195a88)
 
 
 5. Open command prompt (can be any directory), enter
@@ -47,9 +49,9 @@ dotnet ef database update
 
 
 8. Build and Run using Visual Studio 2022
-```
+
 -> Clone repository using VS, build and run application via IIS express
-```
+
 
 #### Execute Rest Apis via swagger
 
