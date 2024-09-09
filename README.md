@@ -1,5 +1,16 @@
 # CampusConnect
 
+## Technologies
+
+Framework
+   * Database - Microsoft SQL Server
+   * Rest Api - Develop using .Net 8
+
+Library
+   * EntityFrameworkCore 8
+   * Mediatr
+   * Swashbuckle (swagger)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development.
