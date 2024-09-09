@@ -25,7 +25,7 @@ Follow tutorial : https://www.c-sharpcorner.com/article/how-to-install-sql-serve
 > No need to change anything
 
 
-5. Open command prompt, enter
+5. Open command prompt (can be any directory), enter
 ```
 dotnet tool install --global dotnet-ef
 ```
@@ -35,7 +35,16 @@ dotnet tool install --global dotnet-ef
 dotnet ef database update
 ```
 
+![image](https://github.com/user-attachments/assets/3c4181bb-fd61-4b3f-b119-29a9937937c7)
+
+
 7. Verify in Microsoft SQL Server Management Studio (SSMS), database CampusConnect is created with seeded data
+
+- Country table (seeded)
+- Universities table (seeded)
+
+![image](https://github.com/user-attachments/assets/5f4e44f4-cdfc-4a93-83d1-5200fa0f03f4)
+
 
 8. Build and Run using Visual Studio 2022
 ```
@@ -44,4 +53,4 @@ dotnet ef database update
 
 #### Execute Rest Apis via swagger
 
-Browse swagger url : [http://localhost:6600/swagger/index.html](https://localhost:44374/swagger/index.html)
+Browse swagger url : [(https://localhost:44374/swagger/index.html)](https://localhost:44374/swagger/index.html)
